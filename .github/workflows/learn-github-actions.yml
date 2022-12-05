@@ -1,8 +1,7 @@
 name: learn-github-actions
 run-name: ${{github.actor}} is learning Github Actions
 on: [push]
-jobs
-
+jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +12,7 @@ jobs
       - run: npm install -g bats
       - run: bats -v
   example-job:
+    runs-on: ubuntu-latest
     steps:
       - shell: bash
         run: expr 1 + 1 > output.log
